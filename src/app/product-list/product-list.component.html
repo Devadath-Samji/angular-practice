@@ -1,5 +1,5 @@
 <h2>Products</h2>
-<div *ngFor="let product of productsArray; index as productId">
+<div *ngFor="let product of productsArrayVariable; index as productId">
   <!-- string interpolation -->
   <a [title]="'Details of' + product.name + '!!!'" [routerLink]="['/products',productId]">{{product.name}}</a>
   <h2>{{product.price}}</h2>
