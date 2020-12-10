@@ -6,7 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+//import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { CourseComponent } from './course/course.component';
 
 @NgModule({
@@ -21,7 +21,7 @@ import { CourseComponent } from './course/course.component';
     AppComponent,
     TopBarComponent,
     ProductListComponent,
-    ShoppingCartComponent,
+    //ShoppingCartComponent,
     CourseComponent
   ],
   bootstrap: [ AppComponent ]
