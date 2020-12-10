@@ -1,7 +1,7 @@
 <h2>Products</h2>
-<div *ngFor="let product of products">
+<div *ngFor="let product of products; index as productId">
   <!-- string interpolation -->
-  <a [title]="'Details of' + product.name + '!!!'" [routerLink]="['/product',productId]">{{product.name}}</a>
+  <a [title]="'Details of' + product.name + '!!!'" [routerLink]="['/products',productId]">{{product.name}}</a>
   <h2>{{product.price}}</h2>
   <span *ngIf="product.description">Description :{{product.description}}
         <button (click)="share(product.name)">

@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 //import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
-import { CourseComponent } from './course/course.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 
@@ -16,7 +15,8 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: ProductListComponent },{ path: 'products/:productId', component: ProductDetailsComponent }
+      { path: '', component: ProductListComponent },
+      { path: 'products/:productId', component: ProductDetailsComponent }
     ])
   ],
   declarations: [
@@ -24,7 +24,6 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
     TopBarComponent,
     ProductListComponent,
     //ShoppingCartComponent,
-    CourseComponent,
     ProductDetailsComponent,
     ProductAlertsComponent
   ],

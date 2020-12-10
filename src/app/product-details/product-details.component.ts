@@ -6,26 +6,33 @@ import {productsArray} from '../productsFile';
   templateUrl: './product-details.component.html',
   styleUrls: ['./product-details.component.css']
 })
-export class ProductDetailsComponent implements OnInit  {
-  //variable to store product which was selected
+export class ProductDetailsComponent  implements OnInit{
+  // variable to store the product which was selected.
   product;
-  constructor(private route:ActivatedRoute) { 
-    console.log("ProductDetailsComponent");
-  }
-  //void ngOnInit(){}
-  ngOnInit(): void{
-    this.route.paramMap.subscribe(function(params){
-      this.product = productsArray[+params.get('productId')];
-    });
-   /* Alternate short way is shown below
-   
-    this.route.paramMap.subscribe(params => {
-      productsArray[+params.get('ProductId')]
-    })
-     */
-    console.log("ProductDetailsComponent post construtction ngOnInit");
-  }
+  // private route:ActivatedRoute;
+  // ProductDetailsComponent(){
+    // private ActivatedRoute route;
+    // access type variable
+    // access variable:type
+  // }
+  constructor( private route:ActivatedRoute) {
+    console.log("ProductDetailsComponent Constructed");
+   }
+  //  void ngOnInit() {}
+ngOnInit(): void {
 
+//  this.route.paramMap.subscribe( function (params){
+//   this.product = productsArray[+params.get('productId')];
+//  });
 
+  this.route.paramMap.subscribe( params => {
+    this.product = productsArray[+params.get('productId')];
+  });
 
+  // this.route.paramMap.subscribe( params => 
+  //   productsArray[+params.get('productId')]
+  // );
+
+ console.log("ProductDetailsComponent post construction ngOnInit");
+}
 }

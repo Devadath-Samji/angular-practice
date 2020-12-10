@@ -8,10 +8,14 @@ import { productsArray } from '../productsFile';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
-  products = productsArray;
+  productsArrayVariable = productsArray;
 
   share() {
     window.alert('The product has been shared!');
+  }
+  onNotify(){
+    // alert('Will get notified when product goes on sale!');
+    console.log("'Will get notified when product goes on sale!");
   }
 }
 
