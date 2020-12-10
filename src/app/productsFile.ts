@@ -1,4 +1,4 @@
-export const products = [
+export const productsArray = [
   {
     name: 'Phone XL',
     price: 799,

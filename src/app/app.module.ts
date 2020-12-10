@@ -8,13 +8,14 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 //import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { CourseComponent } from './course/course.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: ProductListComponent },
+      { path: '', component: ProductListComponent },{ path: 'products/:productId', component: ProductDetailsComponent }
     ])
   ],
   declarations: [
@@ -22,7 +23,8 @@ import { CourseComponent } from './course/course.component';
     TopBarComponent,
     ProductListComponent,
     //ShoppingCartComponent,
-    CourseComponent
+    CourseComponent,
+    ProductDetailsComponent
   ],
   bootstrap: [ AppComponent ]
 })

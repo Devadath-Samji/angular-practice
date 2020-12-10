@@ -1,10 +1,21 @@
 <h2>Products</h2>
-<h3>List of Products</h3>
+<div *ngFor="let product of products">
+  <!-- string interpolation -->
+  <h3>{{product.name}}</h3>
+  <h2>{{product.price}}</h2>
+  <h1>{{product.description}}</h1>
+</div>
+<a [title] = "'Details of ' + product.name" >{{product.name}}</a>
+
+
+
+
+<!-- <h3>List of Products</h3>
 <ol>
  <li>Laptop</li>
  <li>Mobile</li>
  <li>TV</li>
-</ol>
+</ol> -->
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
