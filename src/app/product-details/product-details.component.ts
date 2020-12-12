@@ -15,6 +15,9 @@ export class ProductDetailsComponent  implements OnInit{
     // access type variable
     // access variable:type
   // }
+  buy(){
+    window.alert("Product added to cart");
+  }
   constructor( private route:ActivatedRoute) {
     console.log("ProductDetailsComponent Constructed");
    }
